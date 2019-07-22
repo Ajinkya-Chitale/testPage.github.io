@@ -1,0 +1,284 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Form Validation</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<link rel="stylesheet" href="css/style.css">
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		 <div class="mt-5">
+			 <div class="row">
+			 	<div class="col-lg-12 col-md-12 col-sm-12 col-12">
+			 		<form class="login">
+						<h2>Login Form</h2>
+						<div class="form-group">
+						  <label for="email">Email:</label>
+						  <input type="email" class="form-control" id="email1" placeholder="Enter email" name="email" autocomplete="off">
+						  <span class="errormsg" id="erroremail"><sup>*</sup>Incorrect Email Id</span>
+						</div>
+						<div class="form-group">
+						  <label for="pwd">Password:</label>
+						  <input type="password" class="form-control" id="pwd1" placeholder="Enter password" name="pswd" autocomplete="off">
+						  <span class="errormsg" id="errorpass"><sup>*</sup>Invalid Password</span>
+						</div>
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-8 col-md-8 col-sm-6 col-6 form-group form-check">
+								  <label class="form-check-label">
+									<input class="form-check-input" type="checkbox" name="remember"> Remember me
+								  </label>
+								</div>
+								<div class="col-lg-4 col-md-4 col-sm-6 col-6">
+								  <p class="message"><a href="#">Register</a></p>
+								</div>
+							</div>
+						</div>
+						
+						<button type="submit" id="loginform" class="btn btn-primary">Login</button>
+					 </form>
+					
+					<form class="registration">
+						<h2 class="text-center pb-3">Registration Form</h2>
+						<div class="container">
+							<div class="row">
+						<div class="form-group col-lg-6 col-md-6 col-sm-12 col-12">
+							<label for="name">UserName:</label>
+							<input type="text" class="form-control" id="name" placeholder="Enter your name" name="name" autocomplete="off">
+							<span class="errormsg" id="errorusername"><sup>*</sup>Please enter valid username.</span>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-12 col-12">
+						  <label for="email">Email:</label>
+						  <input type="text" class="form-control" id="email" placeholder="Enter Email ID" name="email" autocomplete="off">
+						  <span class="errormsg" id="erroremail"><sup>*</sup>Please enter valid Email Id.</span>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-12 col-12">
+							<label for="mob">Mobile Number:</label>
+							<input type="text" class="form-control" id="mob" placeholder="Enter your number" name="mob" maxlength="13" autocomplete="off">
+							<span class="errormsg" id="errormob"><sup>*</sup>Please enter valid Mobile Number start with 91-.</span>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-12 col-12">
+						  <label for="city">City:</label>
+						  <input type="text" class="form-control" id="city" placeholder="Enter City" name="city" autocomplete="off">
+						  <span class="errormsg" id="errorcity"><sup>*</sup>Please enter City.</span>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-12 col-12">
+						  <label for="state">State:</label>
+						  <input type="text" class="form-control" id="state" placeholder="Enter State" name="state" autocomplete="off">
+						  <span class="errormsg" id="errorstate"><sup>*</sup>Please enter State.</span>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-12 col-12">
+						  <label for="zip">ZIP Code:</label>
+						  <input type="text" class="form-control" id="zip" placeholder="Enter ZIP Code" name="zip" maxlength="6" autocomplete="off">
+						  <span class="errormsg" id="errorzip"><sup>*</sup>Please enter ZIP Code.</span>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-12 col-12">
+						  <label for="pwd">Password:</label>
+						  <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="pswd" autocomplete="off">
+						  <span class="errormsg" id="errorpass"><sup>*</sup>Enter Password</span>
+						</div>
+						<div class="form-group col-lg-6 col-md-6 col-sm-12 col-12">
+						  <label for="cpwd">Confirm Password:</label>
+						  <input type="text" class="form-control" id="cpwd" placeholder="Confirm your password" name="cpswd" autocomplete="off">
+						  <span class="errormsg" id="errorcpass"><sup>*</sup>Password does not match.</span>
+						</div></div></div>
+						
+						<div class="container">
+							<div class="row">
+								<div class="col-lg-12 col-md-12 col-sm-12 col-12 pl-3">
+								  <p class="message"><a href="#">Already Registered! Login</a></p>
+								</div>
+							</div>
+						</div>
+						<button id="submitform" type="submit" class="btn btn-primary">Create</button>
+					 </form>
+			  	</div>
+			 </div>
+		</div>
+	</div>
+ 	<div>&nbsp;</div>
+ 	<div class="container">
+	  <div id="accordion">
+		<div class="card">
+		  <div class="card-header">
+			<a class="card-link" data-toggle="collapse" href="#collapseOne">
+			  Collapsible Group Item #1
+			</a>
+		  </div>
+		  <div id="collapseOne" class="collapse show" data-parent="#accordion">
+			<div class="card-body">
+			  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</div>
+		  </div>
+		</div>
+		<div class="card">
+		  <div class="card-header">
+			<a class="collapsed card-link" data-toggle="collapse" href="#collapseTwo">
+			Collapsible Group Item #2
+		  </a>
+		  </div>
+		  <div id="collapseTwo" class="collapse" data-parent="#accordion">
+			<div class="card-body">
+			  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</div>
+		  </div>
+		</div>
+		<div class="card">
+		  <div class="card-header">
+			<a class="collapsed card-link" data-toggle="collapse" href="#collapseThree">
+			  Collapsible Group Item #3
+			</a>
+		  </div>
+		  <div id="collapseThree" class="collapse" data-parent="#accordion">
+			<div class="card-body">
+			  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  	
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  	<script>
+		$('.message a').click(function(){
+			$('form').animate({height:"toggle", opacity: "toggle"}, "slow");
+		});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$('#submitform').on("click",function(){
+				var username = $('#name').val();
+				var email = $('#email').val();
+				var pass = $('#pwd').val();
+				var cpass = $('#cpwd').val();
+				var mob = $('#mob').val();
+				var city = $('#city').val();
+				var state = $('#state').val();
+				var zip = $('#zip').val();
+				$('.errormsg').hide();
+				
+				if(checkUsername(username) == false){
+					$('#errorusername').show();
+					return false;
+				}
+				if(checkEmail(email) == false){
+					$('#erroremail').show();
+					return false;
+				}
+				if(checkmob(mob) == false){
+					$('#errormob').show();
+					return false;
+				}
+				if(checkcity(city) == false){
+					$('#errorcity').show();
+					return false;
+				}
+				if(checkstate(state) == false){
+					$('#errorstate').show();
+					return false;
+				}
+				if(checkzip(zip) == false){
+					$('#errorzip').show();
+					return false;
+				}
+				if(checkpass(pass) == false){
+					$('#errorpass').show();
+					return false;
+				}
+				if(pass != cpass){
+					$('#errorcpass').show();
+					return false;
+				}
+				
+			});
+		});
+		
+		$(document).ready(function(){
+			$('#loginform').on('click',function(){
+				var email = $('#email1').val();
+				var pass = $('#pwd1').val();
+				$('.errormsg').hide();
+				if(checkEmail(email) == false){
+					$('#erroremail').show();
+					return false;
+				}
+				if(checkpass(pass) == false){
+					$('#errorpass').show();
+					return false;
+				}
+			});
+		});
+		
+		function checkUsername(username){
+			var pattern = /^([A-Za-z\s]){5,30}$/;
+			if(pattern.test(username)){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+		
+		function checkEmail(email){
+			var pattern = /^[A-Za-z.0-9_-]{3,}@[A-Za-z-]{5,}[.]{1,}[A-Za-z.]{2,}$/;
+			if(pattern.test(email)){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+		function checkpass(pass){
+			var pattern = /^[A-Za-z\d!@#$%^&*()_+=]{8,}$/;
+			if(pattern.test(pass)){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+		function checkmob(mob){
+			var pattern = /^[91-]+[789]\d{9}$/;
+			if(pattern.test(mob)){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+		function checkcity(city){
+			var pattern = /^[A-Za-z]{3,}$/;
+			if(pattern.test(city)){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+		function checkstate(state){
+			var pattern = /^[A-Za-z]{3,}$/;
+			if(pattern.test(state)){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+		function checkzip(zip){
+			var pattern = /^[\d]{6}$/;
+			if(pattern.test(zip)){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+		
+	</script>
+</body>
+</html>

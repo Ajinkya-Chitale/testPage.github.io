@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+
+.registration{
+	display: none;
+}
+.has-success{
+	background-color: green !important;
+}
+.errormsg{
+ color: #cc0000;
+ margin-bottom: 10px;
+ display:none;
+}
+.card .card-header a::after{
+	content: '-';
+	float: right;
+}
+.card .card-header a.collapsed::after{
+	content: '+';
+	float: right;
+}
