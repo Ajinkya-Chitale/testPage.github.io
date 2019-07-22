@@ -110,9 +110,16 @@
 			</a>
 		  </div>
 		  <div id="collapseOne" class="collapse show" data-parent="#accordion">
-			<div class="card-body">
-			  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			<div class="card-body content1">
+			  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo esse dolorum voluptates nesciunt nam debitis, iste. Sunt facere voluptatibus at eaque, beatae laudantium tenetur. Tempore reiciendis ut beatae consequatur quas.</p>
+			  <ul>
+			  	<li>Tea</li>
+			  	<li>Cofee</li>
+			  	<li>Burger</li>
+			  </ul>
 			</div>
+			<button class="btn btn-primary" id="btn1">Click here</button>
+			<p id="demo"></p>
 		  </div>
 		</div>
 		<div class="card">
@@ -123,8 +130,15 @@
 		  </div>
 		  <div id="collapseTwo" class="collapse" data-parent="#accordion">
 			<div class="card-body">
-			  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo esse dolorum voluptates nesciunt nam debitis, iste. Sunt facere voluptatibus at eaque, beatae laudantium tenetur. Tempore reiciendis ut beatae consequatur quas.</p>
+			  <ul>
+			  	<li>Tea</li>
+			  	<li>Cofee</li>
+			  	<li>Burger</li>
+			  </ul>
 			</div>
+			<button class="btn btn-primary" id="btn2">Click here</button>
+			<p id="demo1"></p>
 		  </div>
 		</div>
 		<div class="card">
@@ -135,8 +149,15 @@
 		  </div>
 		  <div id="collapseThree" class="collapse" data-parent="#accordion">
 			<div class="card-body">
-			  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+			 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo esse dolorum voluptates nesciunt nam debitis, iste. Sunt facere voluptatibus at eaque, beatae laudantium tenetur. Tempore reiciendis ut beatae consequatur quas.</p>
+			  <ul>
+			  	<li>Tea</li>
+			  	<li>Cofee</li>
+			  	<li>Burger</li>
+			  </ul>
 			</div>
+			<button class="btn btn-primary" id="btn3">Click here</button>
+			<p id="demo2"></p>
 		  </div>
 		</div>
 	  </div>
@@ -279,6 +300,42 @@
 			}
 		}
 		
+		$(document).ready(function(){
+			var a = $(".content1").html();
+			
+			$("#btn1").click(function(){
+				$("#demo").show();
+				$("#demo").html(a);
+				$("#demo").addClass("container-fluid");
+				$("#btn1").css("display","none");
+			});
+			$(".collapsed").click(function(){
+				$("#demo").hide();
+				$("#btn1").css("display","inline-block");
+			});
+			
+			$("#btn2").click(function(){
+				$("#demo1").show();
+				$("#demo1").html(a);
+				$("#demo1").addClass("container-fluid");
+				$("#btn2").css("display","none");
+			});
+			$(".collapsed").click(function(){
+				$("#demo1").hide();
+				$("#btn2").css("display","inline-block");
+			});
+			
+			$("#btn3").click(function(){
+				$("#demo2").show();
+				$("#demo2").html(a);
+				$("#demo2").addClass("container-fluid");
+				$("#btn3").css("display","none");
+			});
+			$(".collapsed").click(function(){
+				$("#demo2").hide();
+				$("#btn3").css("display","inline-block");
+			});
+		});
 	</script>
 </body>
 </html>
