@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Form Validation</title>
+	<title>Practice Page</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
  	<link rel="stylesheet" href="css/style.css">
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -111,7 +111,7 @@
 	  <div id="accordion">
 		<div class="card">
 		  <div class="card-header">
-			<a class="card-link" data-toggle="collapse" href="#collapseOne">
+			<a class="collapsed card-link" data-toggle="collapse" href="#collapseOne">
 			  Collapsible Group Item #1
 			</a>
 		  </div>
@@ -170,20 +170,27 @@
 	</div>
  	<div class="container">
  		<h2 class="text-center text-info mt-3 mb-3">My Gallary</h2>
- 		<div class="row gallary">
- 			<div class="col-lg-4 col-md-4 col-sm-2 col-12">
+ 		<div class="row" style="background-color: aqua">
+ 			<div class="icons mt-2 mb-2" style="margin-left: 45%;">
+ 				<i class="fa fa-square fa-2x"></i>
+ 				<i class="fa fa-th-large fa-2x"></i>
+ 				<i class="fa fa-th fa-2x"></i>
+ 			</div>
+ 		</div>
+ 		<div class="row gallary mt-3">
+ 			<div class="col-lg-4 col-md-4 col-sm-2 col-12" id="column1">
  				<a href="images/1.jpg" data-lightbox="mygallary"><img src="images/1.jpg" class="img-fluid mb-3"></a>
  				<a href="images/2.jpg" data-lightbox="mygallary"><img src="images/2.jpg" class="img-fluid mb-3"></a>
  				<a href="images/3.jpg" data-lightbox="mygallary"><img src="images/3.jpg" class="img-fluid mb-3"></a>
  				<a href="images/12.jpg" data-lightbox="mygallary"><img src="images/12.jpg" class="img-fluid mb-3"></a>
  			</div>
- 			<div class="col-lg-4 col-md-4 col-sm-2 col-12">
+ 			<div class="col-lg-4 col-md-4 col-sm-2 col-12" id="column2">
  				<a href="images/11.jpg" data-lightbox="mygallary"><img src="images/11.jpg" class="img-fluid mb-3"></a>
  				<a href="images/6.jpg" data-lightbox="mygallary"><img src="images/6.jpg" class="img-fluid mb-3"></a>
  				<a href="images/7.jpg" data-lightbox="mygallary"><img src="images/7.jpg" class="img-fluid mb-3"></a>
  				<a href="images/8.jpg" data-lightbox="mygallary"><img src="images/8.jpg" class="img-fluid mb-3"></a>
  			</div>
- 			<div class="col-lg-4 col-md-4 col-sm-2 col-12">
+ 			<div class="col-lg-4 col-md-4 col-sm-2 col-12" id="column3">
  				<a href="images/9.jpg" data-lightbox="mygallary"><img src="images/9.jpg" class="img-fluid mb-3"></a>
  				<a href="images/10.jpg" data-lightbox="mygallary"><img src="images/10.jpg" class="img-fluid mb-3"></a>
  				<a href="images/5.jpg" data-lightbox="mygallary"><img src="images/5.jpg" class="img-fluid mb-3"></a>
@@ -363,6 +370,30 @@
 			$(".collapsed").click(function(){
 				$("#demo2").hide();
 				$("#btn3").css("display","inline-block");
+			});
+		});
+	</script>
+	
+	<script>
+		$(document).ready(function(){
+			$('.fa-square').click(function(){
+				$('#column1').addClass("col-lg-12").removeClass("col-lg-4");
+				$('#column2').addClass("col-lg-12").removeClass("col-lg-4");
+				$('#column3').addClass("col-lg-12").removeClass("col-lg-4");
+			});
+		});
+		$(document).ready(function(){
+			$('.fa-th-large').click(function(){
+				$('#column1').addClass("col-lg-6").removeClass("col-lg-12 col-lg-4");
+				$('#column2').addClass("col-lg-6").removeClass("col-lg-12 col-lg-4");
+				$('#column3').addClass("col-lg-6").removeClass("col-lg-12 col-lg-4");
+			});
+		});
+		$(document).ready(function(){
+			$('.fa-th').click(function(){
+				$('#column1').addClass("col-lg-4").removeClass("col-lg-6 col-lg-12");
+				$('#column2').addClass("col-lg-4").removeClass("col-lg-6 col-lg-12");
+				$('#column3').addClass("col-lg-4").removeClass("col-lg-6 col-lg-12");
 			});
 		});
 	</script>
